@@ -11,8 +11,8 @@ import {
   Star,
 } from 'lucide-react';
 
-import heroMain from '../hero-background.jpg';
-import heroCouple from '../hero-couple.jpg';
+import heroMain from '../תמונה של WhatsApp‏ 2025-12-01 בשעה 13.06.01_df5423a4.jpg';
+import heroCouple from '../תמונה של WhatsApp‏ 2025-12-01 בשעה 13.07.13_a8a63e21.jpg';
 import logo from '../logo.png';
 import michalPhoto from '../michal-photo.jpg';
 
@@ -163,11 +163,11 @@ const LandingPage: React.FC = () => {
   const primaryCta = (
     <button
       onClick={() => scrollToSection('pricing')}
-      className="group relative flex items-center justify-center gap-3 px-12 py-6 rounded-full bg-gradient-to-br from-[var(--brand-accent)] via-[var(--brand-accent-deep)] to-[var(--brand-burgundy)] text-white font-bold text-lg shadow-2xl shadow-[var(--brand-accent)]/40 hover:shadow-[var(--brand-accent)]/60 hover:scale-[1.08] transition-all duration-500 overflow-hidden"
+      className="group relative flex items-center justify-center gap-2 px-8 py-4 rounded-full bg-gradient-to-br from-[var(--brand-accent)] via-[var(--brand-accent-deep)] to-[var(--brand-burgundy)] text-white font-bold text-base shadow-2xl shadow-[var(--brand-accent)]/40 hover:shadow-[var(--brand-accent)]/60 hover:scale-[1.08] transition-all duration-500 overflow-hidden"
     >
       <span className="absolute inset-0 bg-gradient-to-br from-white/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
       <span className="relative z-10">כן, אני רוצה לשפר את הזוגיות שלי ולהצטרף לקורס!</span>
-      <ArrowLeft className="w-6 h-6 relative z-10 group-hover:translate-x-1 transition-transform duration-300" />
+      <ArrowLeft className="w-5 h-5 relative z-10 group-hover:translate-x-1 transition-transform duration-300" />
     </button>
   );
 
@@ -567,14 +567,14 @@ const LandingPage: React.FC = () => {
             {priceBlocks.map((block, idx) => (
               <div
                 key={block.label}
-                className={`group relative p-10 rounded-3xl shadow-xl border-2 transition-all duration-500 transform hover:-translate-y-5 hover:shadow-2xl grain-overlay ${
+                className={`group relative p-8 rounded-3xl shadow-xl border-2 transition-all duration-500 transform hover:-translate-y-5 hover:shadow-2xl grain-overlay min-h-[280px] flex flex-col ${
                   idx === 1
-                    ? 'bg-gradient-to-br from-[var(--brand-accent)] to-[var(--brand-accent-deep)] border-[var(--brand-accent)] scale-105 md:scale-110'
+                    ? 'bg-gradient-to-br from-[var(--brand-accent)] to-[var(--brand-accent-deep)] border-[var(--brand-accent)] scale-100 md:scale-105'
                     : 'bg-white border-[var(--brand-border)] hover:border-[var(--brand-accent)]'
                 }`}
               >
                 {idx === 1 && (
-                  <div className="absolute -top-5 left-1/2 -translate-x-1/2 px-6 py-2 bg-[var(--brand-gold)] text-white font-bold text-sm rounded-full shadow-lg">
+                  <div className="absolute -top-3 left-1/2 -translate-x-1/2 px-6 py-2 bg-[var(--brand-gold)] text-white font-bold text-sm rounded-full shadow-lg">
                     הכי פופולרי!
                   </div>
                 )}
@@ -582,20 +582,20 @@ const LandingPage: React.FC = () => {
                   idx === 1 ? 'from-white/10 to-transparent' : 'from-[var(--brand-cream)]/40 to-[var(--brand-gold)]/20'
                 }`} />
 
-                <div className="relative flex items-center justify-between mb-6">
-                  <h3 className={`text-2xl font-display font-bold ${idx === 1 ? 'text-white' : 'text-[var(--brand-ink)]'}`}>
+                <div className="relative flex items-center justify-between mb-5">
+                  <h3 className={`text-xl font-display font-bold ${idx === 1 ? 'text-white' : 'text-[var(--brand-ink)]'}`}>
                     {block.label}
                   </h3>
-                  <div className={`w-12 h-12 rounded-full flex items-center justify-center ${
+                  <div className={`w-11 h-11 rounded-full flex items-center justify-center flex-shrink-0 ${
                     idx === 1 ? 'bg-white/20' : 'bg-[var(--brand-accent)]/10'
                   }`}>
-                    <Gift className={`w-7 h-7 ${idx === 1 ? 'text-white' : 'text-[var(--brand-accent)]'}`} />
+                    <Gift className={`w-6 h-6 ${idx === 1 ? 'text-white' : 'text-[var(--brand-accent)]'}`} />
                   </div>
                 </div>
-                <div className={`text-5xl font-black font-display mb-6 ${idx === 1 ? 'text-white' : 'text-[var(--brand-ink)]'}`}>
+                <div className={`text-4xl font-black font-display mb-5 ${idx === 1 ? 'text-white' : 'text-[var(--brand-ink)]'}`}>
                   {block.price}
                 </div>
-                <p className={`text-base leading-relaxed ${idx === 1 ? 'text-white/95' : 'text-[var(--brand-ink)]/70'}`}>
+                <p className={`text-sm leading-relaxed ${idx === 1 ? 'text-white/95' : 'text-[var(--brand-ink)]/70'}`}>
                   {block.note}
                 </p>
               </div>
