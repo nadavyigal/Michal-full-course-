@@ -9,6 +9,9 @@ import {
   MessageCircle,
   Shield,
   Star,
+  RefreshCw,
+  Users,
+  MessageSquare,
 } from 'lucide-react';
 
 import heroMain from '../תמונה של WhatsApp‏ 2025-12-01 בשעה 13.06.01_df5423a4.jpg';
@@ -17,31 +20,30 @@ import logo from '../מחוברים מחדש לוגו - חדש.jpg';
 import newLogo from '../לוגו לחזור הביתה.png';
 import michalPhoto from '../מחוברים מחדש השוות[2] - תמונה של מיכל .jpg';
 import heartHands from '../1מחוברים מחדש[2].png';
+import courseImage from '../תמונה של WhatsApp‏ 2025-12-09 בשעה 11.39.05_59208597.jpg';
 
 const painPoints = [
-  'נמאס לכם מהריבים שחוזרים על עצמם?',
-  'מלהרגיש לבד בתוך הקשר, אפילו כשהכול "בסדר מבחוץ"?',
-  'מהמקום שבו אתם נותנים, מסבירים, מדברים - וזה עדיין לא משתנה?',
-  'אתם לא לבד. לרוב הזוגות זה קורה. לא בגלל שמשהו "דפוק" בקשר, אלא כי אף פעם לא לימדו אותנו אחרת.',
+  { text: 'נמאס לכם מהריבים שחוזרים על עצמם?', icon: RefreshCw },
+  { text: 'מלהרגיש לבד בתוך הקשר, אפילו כשהכול "בסדר מבחוץ"?', icon: Users },
+  { text: 'מהמקום שבו אתם נותנים, מסבירים, מדברים - וזה עדיין לא משתנה?', icon: MessageSquare },
 ];
 
 const fitList = [
   'המרחק גדל, הקרבה והקלות הלכו לאיבוד',
   'התקשורת מתוחה ושחוקה',
-  'המאמץ נופל בעיקר עליו/עליה',
-  'יש רצון לשפר מבפנים — בלי להכריח את בן/בת הזוג להצטרף',
-  'כבר עבר את קורס "מחוברים מחדש" ורוצה להעמיק',
-  'מבין שכדי לשנות את הזוגיות – לא חייבים לשנות את הפרטנר',
-  'מוכן להביט פנימה, לרפא את המקומות שכבר מזמן מבקשים תשומת לב',
-  'רוצה לא רק להפסיק לריב – אלא ליצור מחדש את הקשר שהוא באמת רוצה לחיות בו',
-  'רוצה לקחת אחריות וליצור משהו חדש בזוגיות',
-  'רוצה להתפתח ולגדול',
+  'המאמץ נופל בעיקר עליך',
+  'כשרק אחד מבני הזוג מעוניין לעבור טיפול או התפתחות בנושא',
+  'כבר עברת את קורס "מחוברים מחדש" ורוצה להעמיק',
+  'כשיש הבנה שכדי לשנות את הזוגיות – לא חייבים לשנות את הפרטנר',
+  'אם יש לך מוכנות להביט פנימה, לרפא את המקומות שכבר מזמן מבקשים תשומת לב',
+  'כשיש רצון להפסיק את הריב ולחזור לקרבה ואינטימיות',
+  'כשיש רצון להתפתח ולגדול',
 ];
 
 const details = [
   '7 מפגשים פרונטליים | כל מפגש 3 שעות',
-  'ימי שלישי, 10:00-13:00 | 9/12/25 עד 13/1/26',
-  'חלל קסום בתל אביב',
+  'ימי שלישי, 10:00-13:00 | 23/12/25 עד 03/02/26',
+  'אלבה החלל הפנימי, רחוב בת עמי 6 תל אביב',
   'קבוצה קטנה, ליווי אישי, תמיכה, מרחב בטוח ואותנטי',
   'תהליך עומק אישי וקבוצתי – שילוב של כלים מעולם הסאטיה, האמגו, השמאניזם ועוד',
   'נבין מה מפעיל אותנו בזוגיות, נזהה את הדפוסים שחוזרים שוב ושוב',
@@ -359,24 +361,33 @@ const LandingPage: React.FC = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
           <div className="text-center max-w-4xl mx-auto space-y-6">
             <h2 className="text-4xl md:text-6xl lg:text-7xl font-display font-bold text-[var(--brand-ink)]">האם הסיטואציה מוכרת לכם?</h2>
-            <p className="text-2xl md:text-3xl text-[var(--brand-accent)] font-semibold">כי אתם לא לבד</p>
           </div>
 
-          <div className="mt-20 grid md:grid-cols-2 gap-8">
-            {painPoints.map((item) => (
-              <div
-                key={item}
-                className="group relative p-10 bg-white rounded-3xl shadow-lg border-2 border-[var(--brand-border)] transition-all duration-500 transform hover:-translate-y-4 hover:shadow-2xl hover:border-[var(--brand-accent)] grain-overlay"
-              >
-                <div className="absolute inset-0 rounded-3xl bg-gradient-to-br from-[var(--brand-cream)]/50 via-transparent to-[var(--brand-terracotta)]/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-                <div className="relative flex items-start gap-5">
-                  <div className="flex-shrink-0 w-10 h-10 rounded-full bg-gradient-to-br from-[var(--brand-accent)] to-[var(--brand-terracotta)] flex items-center justify-center shadow-lg">
-                    <CheckCircle className="w-6 h-6 text-white" />
+          <div className="mt-20 grid md:grid-cols-3 gap-8">
+            {painPoints.map((item) => {
+              const IconComponent = item.icon;
+              return (
+                <div
+                  key={item.text}
+                  className="group relative p-10 bg-white rounded-3xl shadow-lg border-2 border-[var(--brand-border)] transition-all duration-500 transform hover:-translate-y-4 hover:shadow-2xl hover:border-[var(--brand-accent)] grain-overlay"
+                >
+                  <div className="absolute inset-0 rounded-3xl bg-gradient-to-br from-[var(--brand-cream)]/50 via-transparent to-[var(--brand-terracotta)]/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                  <div className="relative flex items-start gap-5">
+                    <div className="flex-shrink-0 w-10 h-10 rounded-full bg-gradient-to-br from-[var(--brand-accent)] to-[var(--brand-terracotta)] flex items-center justify-center shadow-lg">
+                      <IconComponent className="w-6 h-6 text-white" />
+                    </div>
+                    <p className="text-xl text-[#2d2520] leading-relaxed font-semibold pt-1">{item.text}</p>
                   </div>
-                  <p className="text-xl text-[#2d2520] leading-relaxed font-semibold pt-1">{item}</p>
                 </div>
-              </div>
-            ))}
+              );
+            })}
+          </div>
+
+          <div className="mt-16 text-center max-w-4xl mx-auto">
+            <p className="text-2xl md:text-3xl text-[var(--brand-accent)] font-semibold">כי אתם לא לבד</p>
+            <p className="text-xl md:text-2xl text-[#2d2520] mt-4 leading-relaxed font-medium">
+              אתם לא לבד. לרוב הזוגות זה קורה. לא בגלל שמשהו "דפוק" בקשר, אלא כי אף פעם לא לימדו אותנו אחרת.
+            </p>
           </div>
         </div>
       </section>
@@ -389,10 +400,7 @@ const LandingPage: React.FC = () => {
           <div className="grid lg:grid-cols-3 gap-16 items-start">
             <div className="lg:col-span-1 space-y-7">
               <p className="text-sm font-bold text-[var(--brand-accent)] uppercase tracking-[0.3em]">למי זה מתאים</p>
-              <h2 className="font-display font-bold text-[var(--brand-ink)] leading-tight">למי שמרגיש ש...</h2>
-              <p className="text-xl text-[#2d2520] leading-relaxed font-medium">
-                אם את.ה מרגיש.ה שהלב שלך מוכן לעומק נוסף – אם משהו בתוכך יודע שיש עוד שכבה לחקור, לרפא, ולבחור בה מחדש – אני מזמינה אותך להצטרף למסע הזה. לא בשביל לתקן – אלא כדי לחזור. לעצמך. ולזוגיות שבחרת.
-              </p>
+              <h2 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold text-[var(--brand-ink)] leading-tight">למי שמרגיש ש...</h2>
             </div>
             <div className="lg:col-span-2 grid sm:grid-cols-2 gap-7">
               {fitList.map((item, idx) => (
@@ -428,7 +436,7 @@ const LandingPage: React.FC = () => {
               <div className="relative">
                 <div className="absolute -inset-4 bg-gradient-to-br from-[var(--brand-accent)]/20 to-[var(--brand-gold)]/20 blur-2xl rounded-3xl opacity-60" />
                 <img
-                  src={heartHands}
+                  src={courseImage}
                   alt="חיבור וקרבה"
                   className="relative rounded-3xl shadow-2xl border-4 border-white w-full"
                 />
@@ -479,10 +487,10 @@ const LandingPage: React.FC = () => {
                 <div className="absolute inset-0 rounded-3xl bg-gradient-to-br from-[var(--brand-accent)]/5 via-transparent to-[var(--brand-gold)]/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
 
                 <div className="relative flex items-start justify-between mb-6 gap-4">
-                  <h3 className="text-2xl font-display font-bold text-[var(--brand-ink)] leading-tight">{module.title}</h3>
                   <div className="flex-shrink-0 w-12 h-12 rounded-full bg-gradient-to-br from-[var(--brand-gold)]/30 to-[var(--brand-accent)]/30 flex items-center justify-center border-2 border-[var(--brand-accent)]/40 group-hover:scale-110 transition-transform duration-300">
                     <Star className="w-6 h-6 text-[var(--brand-accent)]" />
                   </div>
+                  <h3 className="text-2xl font-display font-bold text-[var(--brand-ink)] leading-tight flex-1">{module.title}</h3>
                 </div>
                 <ul className="relative space-y-4 text-lg text-[#2d2520]">
                   {module.points.map((bullet) => (
