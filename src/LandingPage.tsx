@@ -178,9 +178,9 @@ const LandingPage: React.FC = () => {
   const primaryCta = (
     <button
       onClick={() => scrollToSection('pricing')}
-      className="group relative flex items-center justify-center gap-2 px-6 py-4 md:px-8 md:py-5 rounded-full bg-gradient-to-r from-[#d4442e] via-[#c23822] to-[#b02d18] text-white font-bold text-base md:text-lg shadow-2xl shadow-red-600/50 hover:shadow-red-600/70 hover:scale-[1.05] active:scale-[0.98] transition-all duration-300 overflow-hidden min-h-[44px] w-full sm:w-auto border-2 border-red-700"
+      className="group relative flex items-center justify-center gap-2 px-6 py-4 md:px-8 md:py-5 rounded-full bg-[#5d4037] text-white font-bold text-base md:text-lg shadow-xl hover:bg-[#4a332a] hover:scale-105 active:scale-95 transition-all duration-300 overflow-hidden min-h-[44px] w-full sm:w-auto"
     >
-      <span className="absolute inset-0 bg-gradient-to-br from-white/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+      <span className="absolute inset-0 bg-gradient-to-br from-white/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
       <span className="relative z-10">כן, אני רוצה לשפר את הזוגיות שלי!</span>
       <ArrowLeft className="w-5 h-5 relative z-10 group-hover:translate-x-1 transition-transform duration-300" />
     </button>
@@ -195,9 +195,9 @@ const LandingPage: React.FC = () => {
       <div className="md:hidden fixed bottom-0 inset-x-0 z-50 p-4 bg-white/98 backdrop-blur-xl border-t border-[var(--brand-border)] shadow-2xl">
         <button
           onClick={() => scrollToSection('pricing')}
-          className="w-full flex items-center justify-center gap-2 px-6 py-4 rounded-full bg-gradient-to-br from-[#8b5a4a] via-[#7d4a3d] to-[#6d3f34] text-white font-bold text-base shadow-xl active:scale-95 transition-all duration-200 min-h-[48px]"
+          className="w-full flex items-center justify-center gap-2 px-6 py-4 rounded-full bg-[#5d4037] text-white font-bold text-base shadow-xl active:scale-95 transition-all duration-200 min-h-[48px]"
         >
-          <span>הצטרפו לקורס עכשיו</span>
+          <span>כן, אני רוצה לשפר את הזוגיות שלי!</span>
           <ArrowLeft className="w-5 h-5" />
         </button>
       </div>
@@ -254,52 +254,64 @@ const LandingPage: React.FC = () => {
         </div>
       </nav>
 
-      <header className="relative pt-28 pb-24 md:pt-36 md:pb-28 lg:pt-44 lg:pb-36 overflow-hidden grain-overlay">
-        <div className="absolute inset-0">
-          <div className="absolute inset-0 w-full h-full">
-            <img src={heroMain} alt="זוג מול שקיעה" className="w-full h-full object-cover scale-105 blur-md opacity-40" />
-          </div>
-          <div className="absolute inset-0 bg-gradient-to-b from-[var(--brand-soft)]/60 via-[var(--brand-soft)]/70 to-[var(--brand-soft)]/95" />
-
-          {/* Subtle decorative elements */}
-          <div className="absolute -left-20 bottom-20 w-96 h-96 bg-[var(--brand-terracotta)]/10 blur-3xl blob" />
-          <div className="absolute -right-20 top-20 w-80 h-80 bg-[var(--brand-accent)]/10 blur-3xl blob-alt" />
+      <header className="relative min-h-[90vh] flex items-center justify-center overflow-hidden grain-overlay pt-28 pb-20 md:pt-32">
+        {/* Background Image - Sunset/Warm Vibe */}
+        <div className="absolute inset-0 z-0">
+          <div className="absolute inset-0 bg-gradient-to-b from-[#fdfbf7] via-[#fff0ea] to-[#fcece6]" />
+          <img
+            src={heroMain}
+            alt="Background"
+            className="absolute bottom-0 left-0 right-0 w-full h-[60vh] object-cover opacity-50"
+          />
         </div>
 
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
-          <div className="grid lg:grid-cols-2 gap-20 items-center">
-            <div className="space-y-10 text-[var(--brand-ink)]">
-              <div className="inline-flex items-center justify-center gap-3 px-6 py-4 rounded-full bg-white/80 border-2 border-[var(--brand-border)] backdrop-blur-xl font-semibold shadow-lg animate-fade-in-up w-fit mx-auto lg:mx-0">
-                <Clock className="w-6 h-6 text-[var(--brand-accent)] flex-shrink-0" />
-                <span className="text-base text-center">מסע עומק של 7 מפגשים להתפתחות אישית וזוגיות</span>
-              </div>
-              <h1 className="text-3xl md:text-4xl lg:text-5xl font-display font-bold max-w-2xl leading-relaxed animate-fade-in-up delay-100 text-[#5d4037]">
-                זוגיות היא אחד הדברים הכי קסומים - וגם אחד הדברים הכי מאתגרים שנעשה בחיים.
-                <br />
-                לעיתים הקסם מתחלף בשגרה, תפעול, מרחק, ריבים, עומס — ותחושה שמשהו כבר לא עובד כמו פעם.
-              </h1>
+        <div className="relative z-10 max-w-3xl mx-auto px-6 text-center flex flex-col items-center gap-4 md:gap-6">
 
-              <div className="flex flex-col gap-4 animate-fade-in-up delay-400">
-                {primaryCta}
-                <button
-                  onClick={() => scrollToSection('pricing')}
-                  className="group flex items-center justify-center gap-2 px-6 py-4 md:px-8 md:py-5 rounded-full bg-white text-[var(--brand-ink)] font-bold text-base md:text-lg border-2 border-[var(--brand-accent)] shadow-xl hover:scale-[1.05] active:scale-95 transition-all duration-300 min-h-[44px] w-full sm:w-auto"
-                >
-                  <span>המסלול עם אימון אישי</span>
-                  <Star className="w-5 h-5" />
-                </button>
-              </div>
-              <button
-                onClick={() => scrollToSection('cta')}
-                className="group font-bold text-[var(--brand-accent)] underline decoration-[var(--brand-accent)]/50 hover:decoration-[var(--brand-accent)] underline-offset-4 transition-all text-xl animate-fade-in-up delay-500 min-h-[44px] flex items-center justify-center"
-              >
-                <MessageCircle className="w-6 h-6 inline-block ml-2" />
-                אשמח לתאם שיחה לבדיקת התאמה לקורס
-              </button>
+          {/* Logo centered */}
+          <div className="animate-fade-in-up">
+            <img src={newLogo} alt="לחזור הביתה" className="h-40 md:h-56 w-auto drop-shadow-xl" />
+          </div>
+
+          {/* Main Text Content */}
+          <div className="space-y-2 md:space-y-8 text-[var(--brand-ink)]">
+
+            <h1 className="text-2xl md:text-4xl font-display font-bold leading-relaxed md:leading-snug animate-fade-in-up delay-100">
+              אף אחד לא לימד אותנו
+              <br className="hidden md:block" />
+              <span className="text-[#5d4037]"> איך באמת להתנהל בתוך זוגיות.</span>
+            </h1>
+
+            <div className="space-y-2 text-lg md:text-2xl font-medium leading-relaxed animate-fade-in-up delay-200 text-[#4a3b32]">
+              <p>איך מתמודדים עם ריחוק שנוצר עם הזמן,</p>
+              <p>עם אותם ריבים שחוזרים שוב ושוב,</p>
+              <p>עם התחושה שפעם היה בינינו משהו יותר קרוב, יותר פשוט.</p>
             </div>
 
+            <div className="space-y-2 text-lg md:text-2xl font-medium leading-relaxed animate-fade-in-up delay-300">
+              <p className="font-bold text-[#5d4037]">ברוב הזוגות זה לא קורה כי אין אהבה –</p>
+              <p>אלא כי כשעולה קושי, אכזבה או פער,</p>
+              <p>אנחנו פשוט לא יודעים מה לעשות אחרת.</p>
+            </div>
 
+            <div className="space-y-2 text-lg md:text-2xl font-medium leading-relaxed animate-fade-in-up delay-400">
+              <p>בקורס "לחזור הביתה" נלמד איך לשפר את הזוגיות שלנו,</p>
+              <p>איך לחזור לקרבה ולביחד שהיו שם פעם,</p>
+              <p>ואיך למצוא את עצמנו בתוך הקשר –</p>
+              <p className="font-bold text-[#5d4037]">בלי לוותר על הזוגיות ובלי לאבד את עצמנו</p>
+            </div>
           </div>
+
+          {/* CTA Button */}
+          <div className="w-full md:w-auto mt-4 animate-fade-in-up delay-500">
+            <button
+              onClick={() => scrollToSection('pricing')}
+              className="w-full md:w-auto px-8 py-5 rounded-full bg-[#5d4037] text-white font-bold text-xl md:text-2xl shadow-xl hover:bg-[#4a332a] hover:scale-105 active:scale-95 transition-all duration-300 flex items-center justify-center gap-3"
+            >
+              <span>כן, אני רוצה לשפר את הזוגיות שלי!</span>
+              <ArrowLeft className="w-6 h-6" />
+            </button>
+          </div>
+
         </div>
       </header>
 
