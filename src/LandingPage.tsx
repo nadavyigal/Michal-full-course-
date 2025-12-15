@@ -17,8 +17,8 @@ import {
 import heroMain from '../תמונה של WhatsApp‏ 2025-12-01 בשעה 13.06.01_df5423a4.jpg';
 import heroCouple from '../תמונה של WhatsApp‏ 2025-12-01 בשעה 13.07.13_a8a63e21.jpg';
 import logo from '../מחוברים מחדש לוגו - חדש.jpg';
-import newLogo from '../לוגו לחזור הביתה.png';
-import michalPhoto from '../מחוברים מחדש השוות[2] - תמונה של מיכל .jpg';
+import newLogo from '../home-logo.png';
+import michalPhoto from './michal-new.jpg';
 import heartHands from '../1מחוברים מחדש[2].png';
 import courseImage from '../תמונה של WhatsApp‏ 2025-12-09 בשעה 11.39.05_59208597.jpg';
 
@@ -131,7 +131,7 @@ const outcomes = [
 
 const priceBlocks = [
   {
-    label: 'הרשמה מוקדמת',
+    label: 'הרשמה מוקדמת (עד 20/12/25)',
     price: '₪2,100',
     originalPrice: '₪2,800',
     savings: '₪700',
@@ -141,7 +141,6 @@ const priceBlocks = [
     features: [
       '7 מפגשים פרונטליים × 3 שעות',
       'קבוצה קטנה עד 12 משתתפים',
-      'חומרי לימוד דיגיטליים',
       'גישה לקהילה סגורה',
     ],
   },
@@ -150,7 +149,7 @@ const priceBlocks = [
     price: '₪3,150',
     breakdown: '₪2,100 + ₪1,050',
     originalPrice: '₪4,500',
-    savings: '₪1,347',
+    savings: '₪1,050',
     bonus: true,
     note: 'המסלול המלא עם ליווי אישי',
     features: [
@@ -196,7 +195,7 @@ const LandingPage: React.FC = () => {
       <div className="md:hidden fixed bottom-0 inset-x-0 z-50 p-4 bg-white/98 backdrop-blur-xl border-t border-[var(--brand-border)] shadow-2xl">
         <button
           onClick={() => scrollToSection('pricing')}
-          className="w-full flex items-center justify-center gap-2 px-6 py-4 rounded-full bg-gradient-to-br from-[var(--brand-accent)] via-[var(--brand-accent-deep)] to-[var(--brand-burgundy)] text-white font-bold text-base shadow-xl active:scale-95 transition-all duration-200 min-h-[48px]"
+          className="w-full flex items-center justify-center gap-2 px-6 py-4 rounded-full bg-gradient-to-br from-[#8b5a4a] via-[#7d4a3d] to-[#6d3f34] text-white font-bold text-base shadow-xl active:scale-95 transition-all duration-200 min-h-[48px]"
         >
           <span>הצטרפו לקורס עכשיו</span>
           <ArrowLeft className="w-5 h-5" />
@@ -213,7 +212,7 @@ const LandingPage: React.FC = () => {
 
             {/* Desktop: Full Navigation with Original Layout */}
             <div className="hidden md:flex items-center gap-5">
-              <img src={logo} alt="Shine by Michal Slonim" className="h-16 w-auto rounded-2xl shadow-xl border-2 border-[var(--brand-border)]" />
+              <img src={newLogo} alt="Shine by Michal Slonim" className="h-24 w-auto rounded-2xl shadow-xl border-2 border-[var(--brand-border)]" />
               <div className="flex flex-col leading-tight">
                 <span className="font-display font-bold text-[var(--brand-ink)] text-2xl">בחזרה לזוגיות שבחרתי</span>
                 <span className="text-base text-[var(--brand-accent)] font-semibold">מסע עומק של 7 מפגשים להתפתחות אישית וזוגיות</span>
@@ -270,28 +269,16 @@ const LandingPage: React.FC = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
           <div className="grid lg:grid-cols-2 gap-20 items-center">
             <div className="space-y-10 text-[var(--brand-ink)]">
-              <div className="inline-flex items-center gap-3 px-6 py-4 rounded-full bg-white/80 border-2 border-[var(--brand-border)] backdrop-blur-xl font-semibold shadow-lg animate-fade-in-up">
-                <Clock className="w-6 h-6 text-[var(--brand-accent)]" />
-                <span className="text-base">מסע עומק של 7 מפגשים להתפתחות אישית וזוגיות</span>
+              <div className="inline-flex items-center justify-center gap-3 px-6 py-4 rounded-full bg-white/80 border-2 border-[var(--brand-border)] backdrop-blur-xl font-semibold shadow-lg animate-fade-in-up w-fit mx-auto lg:mx-0">
+                <Clock className="w-6 h-6 text-[var(--brand-accent)] flex-shrink-0" />
+                <span className="text-base text-center">מסע עומק של 7 מפגשים להתפתחות אישית וזוגיות</span>
               </div>
-              <h1 className="text-3xl md:text-4xl lg:text-5xl font-display font-bold max-w-2xl leading-relaxed animate-fade-in-up delay-100 text-[var(--brand-ink)]">
+              <h1 className="text-3xl md:text-4xl lg:text-5xl font-display font-bold max-w-2xl leading-relaxed animate-fade-in-up delay-100 text-[#5d4037]">
                 זוגיות היא אחד הדברים הכי קסומים - וגם אחד הדברים הכי מאתגרים שנעשה בחיים.
-                אבל עם הזמן… הקסם מתחלף לעיתים בשגרה, תפעול, מרחק, ריבים, עומס — ותחושה שמשהו כבר לא עובד כמו פעם.
+                <br />
+                לעיתים הקסם מתחלף בשגרה, תפעול, מרחק, ריבים, עומס — ותחושה שמשהו כבר לא עובד כמו פעם.
               </h1>
-              <div className="flex flex-wrap gap-4 font-semibold animate-fade-in-up delay-300">
-                {stats.map((stat, idx) => (
-                  <span
-                    key={stat.label}
-                    className="inline-flex items-center gap-3 px-6 py-4 rounded-full bg-white/80 border-2 border-[var(--brand-border)] backdrop-blur-md text-base shadow-lg text-[var(--brand-ink)]"
-                    style={{ animationDelay: `${0.3 + idx * 0.1}s` }}
-                  >
-                    <Heart className="w-6 h-6 text-[var(--brand-accent)]" />
-                    <span>
-                      {stat.value} · {stat.label}
-                    </span>
-                  </span>
-                ))}
-              </div>
+
               <div className="flex flex-col gap-4 animate-fade-in-up delay-400">
                 {primaryCta}
                 <button
@@ -311,43 +298,7 @@ const LandingPage: React.FC = () => {
               </button>
             </div>
 
-            <div className="relative animate-fade-in-scale delay-200">
-              {/* Decorative elements behind card */}
-              <div className="absolute -inset-4 bg-gradient-to-br from-[var(--brand-gold)]/20 to-[var(--brand-terracotta)]/20 blur-2xl rounded-3xl opacity-60" />
 
-              <div className="relative bg-white backdrop-blur-2xl rounded-3xl shadow-2xl border-2 border-[var(--brand-border)] overflow-hidden transform hover:scale-[1.03] hover:rotate-1 transition-all duration-700">
-                <div className="h-80 relative overflow-hidden">
-                  <img src={heroCouple} alt="זוג מחזיק ידיים" className="w-full h-full object-cover transform hover:scale-110 transition-transform duration-700" />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
-                </div>
-                <div className="p-8 md:p-12 space-y-6 text-right bg-white">
-                  <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between text-sm font-semibold gap-3">
-                    <div className="flex items-center gap-2 text-[var(--brand-accent)]">
-                      <Calendar className="w-5 h-5" />
-                      <span>ימי שלישי · 9/12/25–13/1/26 · 10:00-13:00</span>
-                    </div>
-                    <div className="flex items-center gap-2 text-[var(--brand-accent)]">
-                      <MessageCircle className="w-5 h-5" />
-                      <span>קבוצה קטנה, מענה אישי</span>
-                    </div>
-                  </div>
-                  <p className="text-xl md:text-2xl font-display font-semibold text-[var(--brand-ink)] leading-snug">
-                    "זוגיות היא כמו ריקוד, מספיק שאחד משנה את הצעדים שלו והצד השני לא יכול להמשיך אותו הדבר. ככה כל הזוגיות משתנה לכן מספיק שרק אחד מבני הזוג יעשה את הצעד הראשון"
-                  </p>
-                  <div className="flex items-center gap-5 pt-4">
-                    <img
-                      src={michalPhoto}
-                      alt="מיכל סלונים"
-                      className="w-20 h-20 rounded-full object-cover border-3 border-[var(--brand-border)] shadow-xl"
-                    />
-                    <div className="text-base">
-                      <div className="font-display font-bold text-[var(--brand-ink)] text-xl">מיכל סלונים</div>
-                      <div className="font-medium text-[var(--brand-accent)]">מאמנת אישית וזוגית</div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
           </div>
         </div>
       </header>
@@ -400,7 +351,7 @@ const LandingPage: React.FC = () => {
           <div className="grid lg:grid-cols-3 gap-16 items-start">
             <div className="lg:col-span-1 space-y-7">
               <p className="text-sm font-bold text-[var(--brand-accent)] uppercase tracking-[0.3em]">למי זה מתאים</p>
-              <h2 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold text-[var(--brand-ink)] leading-tight">למי שמרגיש ש...</h2>
+              <h2 className="text-5xl md:text-6xl lg:text-7xl font-display font-bold text-[var(--brand-ink)] leading-tight">למי שמרגיש ש...</h2>
             </div>
             <div className="lg:col-span-2 grid sm:grid-cols-2 gap-7">
               {fitList.map((item, idx) => (
@@ -466,16 +417,13 @@ const LandingPage: React.FC = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
           <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-8 mb-20">
             <div className="space-y-6">
-              <p className="text-base font-bold text-[var(--brand-accent)] uppercase tracking-[0.3em]">מבנה הקורס</p>
+              {/* <p className="text-base font-bold text-[var(--brand-accent)] uppercase tracking-[0.3em]">מבנה הקורס</p> */}{/* Removed as requested */}
               <h2 className="text-4xl md:text-6xl lg:text-7xl font-display font-bold text-[var(--brand-ink)] leading-tight">מבנה הקורס ותוכן עניינים</h2>
               <p className="text-xl text-[#2d2520] leading-relaxed max-w-2xl font-medium">
                 בקורס הזה נרד לעומק. לא רק נבין מה קורה – אלא איך אפשר לחיות אחרת, איך לרפא את המקומות שמנהלים את הקשר מתחת לפני השטח: הפחדים. הפגיעויות. דפוסי ההתקשרות. פצעי הילדות. ונלמד איך להתנהל אחרת – מעמדה חדשה של עוצמה, חמלה, קבלה ובחירה מחודשת.
               </p>
             </div>
-            <div className="flex items-center gap-4 text-lg font-bold text-[#2d2520] bg-white px-8 py-5 rounded-full border-2 border-[var(--brand-border)] shadow-xl">
-              <Clock className="w-7 h-7 text-[var(--brand-accent)]" />
-              <span>21 שעות לימוד · חלל קסום בתל אביב</span>
-            </div>
+            {/* Removed the 21 hours stats badge as requested */}
           </div>
 
           <div className="grid md:grid-cols-2 gap-8">
@@ -530,9 +478,9 @@ const LandingPage: React.FC = () => {
             {outcomes.map((item, idx) => (
               <div
                 key={item.title}
-                className="group relative p-8 bg-white rounded-3xl border-2 border-[var(--brand-border)] shadow-md transition-all duration-300 transform hover:-translate-y-3 hover:shadow-2xl hover:border-[var(--brand-accent)]/80"
+                className="group relative p-8 bg-white rounded-3xl border-2 border-[var(--brand-border)] shadow-md transition-all duration-300 transform hover:-translate-y-3 hover:shadow-2xl hover:border-[var(--brand-accent)]/80 pl-20"
               >
-                <div className="absolute top-4 left-4 w-12 h-12 rounded-full bg-gradient-to-br from-[var(--brand-cream)] to-[#f5d5c9] text-[var(--brand-accent)] font-bold text-lg flex items-center justify-center shadow-md">
+                <div className="absolute top-4 left-2 w-12 h-12 rounded-full bg-gradient-to-br from-[var(--brand-cream)] to-[#f5d5c9] text-[var(--brand-accent)] font-bold text-lg flex items-center justify-center shadow-md">
                   {idx + 1}
                 </div>
                 <div className="pt-8 space-y-3">
@@ -549,6 +497,7 @@ const LandingPage: React.FC = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-16 items-start">
             <div className="space-y-6">
+              <h3 className="text-2xl font-bold text-[var(--brand-accent)]">מי אני</h3>
               <h2 className="text-4xl md:text-5xl font-display font-bold text-[var(--brand-ink)]">מיכל סלונים</h2>
               <p className="text-xl text-[#2d2520] leading-relaxed font-medium">
                 שמי מיכל סלונים, מאמנת אישית וזוגית בשיטת סאטיה, מאמנת מנהלים וצוותים ומלווה ארגונים בתהליכי התפתחות והשבחת ההון האנושי.
@@ -598,11 +547,10 @@ const LandingPage: React.FC = () => {
             {priceBlocks.map((block) => (
               <div
                 key={block.label}
-                className={`group relative p-8 md:p-10 rounded-3xl shadow-xl border-2 transition-all duration-500 transform hover:-translate-y-3 hover:shadow-2xl grain-overlay flex flex-col ${
-                  block.featured
-                    ? 'bg-gradient-to-br from-[#8b5a4a] via-[#7d4a3d] to-[#6d3f34] border-[#8b5a4a] md:scale-105'
-                    : 'bg-white border-[var(--brand-border)] hover:border-[var(--brand-accent)]'
-                }`}
+                className={`group relative p-8 md:p-10 rounded-3xl shadow-xl border-2 transition-all duration-500 transform hover:-translate-y-3 hover:shadow-2xl grain-overlay flex flex-col ${block.featured
+                  ? 'bg-gradient-to-br from-[#8b5a4a] via-[#7d4a3d] to-[#6d3f34] border-[#8b5a4a] md:scale-105'
+                  : 'bg-white border-[var(--brand-border)] hover:border-[var(--brand-accent)]'
+                  }`}
               >
                 {block.featured && (
                   <div className="absolute -top-4 left-1/2 -translate-x-1/2 px-6 py-2 bg-[var(--brand-gold)] text-white font-bold text-sm rounded-full shadow-lg">
@@ -617,9 +565,8 @@ const LandingPage: React.FC = () => {
                   </div>
                 )}
 
-                <div className={`absolute inset-0 rounded-3xl bg-gradient-to-br opacity-0 group-hover:opacity-100 transition-opacity duration-500 ${
-                  block.featured ? 'from-white/10 to-transparent' : 'from-[var(--brand-cream)]/40 to-[var(--brand-gold)]/20'
-                }`} />
+                <div className={`absolute inset-0 rounded-3xl bg-gradient-to-br opacity-0 group-hover:opacity-100 transition-opacity duration-500 ${block.featured ? 'from-white/10 to-transparent' : 'from-[var(--brand-cream)]/40 to-[var(--brand-gold)]/20'
+                  }`} />
 
                 <div className="relative space-y-6">
                   <div>
@@ -648,9 +595,8 @@ const LandingPage: React.FC = () => {
                       </p>
                     )}
                     {block.savings && (
-                      <div className={`inline-block px-4 py-2 rounded-full text-sm font-bold ${
-                        block.featured ? 'bg-white/20 text-white' : 'bg-green-100 text-green-800'
-                      }`}>
+                      <div className={`inline-block px-4 py-2 rounded-full text-sm font-bold ${block.featured ? 'bg-white/20 text-white' : 'bg-green-100 text-green-800'
+                        }`}>
                         💰 חוסכים {block.savings}!
                       </div>
                     )}
@@ -668,9 +614,8 @@ const LandingPage: React.FC = () => {
                   </div>
 
                   {block.bonus && (
-                    <div className={`p-4 rounded-2xl border-2 border-dashed ${
-                      block.featured ? 'bg-white/10 border-white/30' : 'bg-green-50 border-green-300'
-                    }`}>
+                    <div className={`p-4 rounded-2xl border-2 border-dashed ${block.featured ? 'bg-white/10 border-white/30' : 'bg-green-50 border-green-300'
+                      }`}>
                       <div className="flex items-start gap-3">
                         <Gift className={`w-6 h-6 flex-shrink-0 ${block.featured ? 'text-white' : 'text-green-700'}`} />
                         <div className="flex-1">
@@ -687,11 +632,10 @@ const LandingPage: React.FC = () => {
 
                   <button
                     onClick={() => scrollToSection('cta')}
-                    className={`w-full py-5 px-6 rounded-full font-bold text-lg transition-all duration-300 transform hover:scale-105 shadow-xl ${
-                      block.featured
-                        ? 'bg-white text-[#6d3f34] hover:bg-white/95 border-2 border-white'
-                        : 'bg-gradient-to-br from-[var(--brand-accent)] to-[var(--brand-accent-deep)] text-white hover:shadow-2xl'
-                    }`}
+                    className={`w-full py-5 px-6 rounded-full font-bold text-lg transition-all duration-300 transform hover:scale-105 shadow-xl ${block.featured
+                      ? 'bg-white text-[#6d3f34] hover:bg-white/95 border-2 border-white'
+                      : 'bg-gradient-to-br from-[var(--brand-accent)] to-[var(--brand-accent-deep)] text-white hover:shadow-2xl'
+                      }`}
                   >
                     {block.featured ? 'הצטרפו עכשיו!' : 'הצטרפו למסלול המורחב'}
                   </button>
@@ -700,9 +644,7 @@ const LandingPage: React.FC = () => {
             ))}
           </div>
 
-          <div className="mt-10 text-lg md:text-xl text-white text-center font-bold bg-gradient-to-r from-red-600 to-orange-600 py-6 px-8 rounded-2xl border-2 border-red-700 shadow-xl">
-            ⏰ הרשמה מוקדמת עד 29/11/25 - חיסכון עד ₪1,347!
-          </div>
+
 
           <div className="mt-14 flex flex-col gap-4 max-w-2xl mx-auto">
             {primaryCta}
@@ -863,7 +805,7 @@ const LandingPage: React.FC = () => {
                 איפה זה ואם יש חניה?
               </h3>
               <p className="text-xl text-[#2d2520] leading-relaxed font-medium">
-                הקורס יהיה בחלל קסום בשכונת נוגה בתל אביב. יש ליד 2 חניונים בתשלום.
+                הקורס יהיה בחלל קסום ברחוב בת עמי 6, תל אביב (שכונת נוגה). יש ליד 2 חניונים בתשלום.
               </p>
             </div>
           </div>
