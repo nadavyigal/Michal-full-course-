@@ -138,6 +138,7 @@ const priceBlocks = [
     featured: true,
     bonus: true,
     note: 'כולל הקורס הפרונטלי מלא',
+    link: 'https://meshulam.co.il/purchase?b=43d9178ba78a68612120e956374cc67b',
     features: [
       '7 מפגשים פרונטליים × 3 שעות',
       'קבוצה קטנה עד 12 משתתפים',
@@ -152,6 +153,7 @@ const priceBlocks = [
     savings: '₪1,050',
     bonus: true,
     note: 'המסלול המלא עם ליווי אישי',
+    link: 'https://meshulam.co.il/purchase?b=1c016a31c06024f2273b64c2c6705cb7',
     features: [
       'כל מה שבמסלול הבסיסי',
       '7 אימונים אישיים (שווי ₪1,400)',
@@ -642,15 +644,15 @@ const LandingPage: React.FC = () => {
                     </div>
                   )}
 
-                  <button
-                    onClick={() => scrollToSection('cta')}
-                    className={`w-full py-5 px-6 rounded-full font-bold text-lg transition-all duration-300 transform hover:scale-105 shadow-xl ${block.featured
+                  <a
+                    href={(block as any).link}
+                    className={`w-full py-5 px-6 rounded-full font-bold text-lg transition-all duration-300 transform hover:scale-105 shadow-xl flex items-center justify-center ${block.featured
                       ? 'bg-white text-[#6d3f34] hover:bg-white/95 border-2 border-white'
-                      : 'bg-gradient-to-br from-[var(--brand-accent)] to-[var(--brand-accent-deep)] text-white hover:shadow-2xl'
+                      : 'bg-white text-[#6d3f34] border-2 border-[#6d3f34] hover:bg-[#6d3f34]/5'
                       }`}
                   >
-                    {block.featured ? 'הצטרפו עכשיו!' : 'הצטרפו למסלול המורחב'}
-                  </button>
+                    הצטרפו עכשיו
+                  </a>
                 </div>
               </div>
             ))}
@@ -731,12 +733,12 @@ const LandingPage: React.FC = () => {
                   </div>
                 </div>
 
-                <button
-                  onClick={() => scrollToSection('cta')}
-                  className="w-full py-5 px-6 rounded-full bg-gradient-to-br from-[var(--brand-accent)] to-[var(--brand-accent-deep)] text-white font-bold text-lg transition-all duration-300 transform hover:scale-105 shadow-xl hover:shadow-2xl"
+                <a
+                  href="https://meshulam.co.il/purchase?b=84cd3ae51b1a480af5e746f4a4a2dcb6"
+                  className="w-full py-5 px-6 rounded-full bg-white text-[#6d3f34] border-2 border-[#6d3f34] font-bold text-lg transition-all duration-300 transform hover:scale-105 shadow-xl hover:shadow-2xl flex items-center justify-center hover:bg-[#6d3f34]/5"
                 >
-                  קנו את הקורס הדיגיטלי
-                </button>
+                  הצטרפו עכשיו
+                </a>
 
                 <p className="text-base text-[#2d2520] text-center mt-4 font-medium">
                   💡 הקורס הזה כלול במתנה בכל אחת מאפשרויות הקורס הפרונטלי
