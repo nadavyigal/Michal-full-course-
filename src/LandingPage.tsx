@@ -24,7 +24,7 @@ import courseImage from '../תמונה של WhatsApp‏ 2025-12-09 בשעה 11.3
 
 const painPoints = [
   { text: 'נמאס לכם מהריבים שחוזרים על עצמם?', icon: RefreshCw },
-  { text: 'מלהרגיש לבד בתוך הקשר, אפילו כשהכול "בסדר מבחוץ"?', icon: Users },
+  { text: 'להרגיש לבד בתוך הקשר, אפילו כשהכול "בסדר מבחוץ"?', icon: Users },
   { text: 'מהמקום שבו אתם נותנים, מסבירים, מדברים - וזה עדיין לא משתנה?', icon: MessageSquare },
 ];
 
@@ -351,7 +351,7 @@ const LandingPage: React.FC = () => {
           <div className="mt-16 text-center max-w-4xl mx-auto">
             <p className="text-2xl md:text-3xl text-[var(--brand-accent)] font-semibold">כי אתם לא לבד</p>
             <p className="text-xl md:text-2xl text-[#2d2520] mt-4 leading-relaxed font-medium">
-              אתם לא לבד. לרוב הזוגות זה קורה. לא בגלל שמשהו "דפוק" בקשר, אלא כי אף פעם לא לימדו אותנו אחרת.
+              לרוב הזוגות זה קורה. לא בגלל שמשהו "דפוק" בקשר, אלא כי אף פעם לא לימדו אותנו אחרת.
             </p>
           </div>
         </div>
@@ -492,9 +492,9 @@ const LandingPage: React.FC = () => {
             {outcomes.map((item, idx) => (
               <div
                 key={item.title}
-                className="group relative p-8 bg-white rounded-3xl border-2 border-[var(--brand-border)] shadow-md transition-all duration-300 transform hover:-translate-y-3 hover:shadow-2xl hover:border-[var(--brand-accent)]/80 pl-20"
+                className="group relative p-8 bg-white rounded-3xl border-2 border-[var(--brand-border)] shadow-md transition-all duration-300 transform hover:-translate-y-3 hover:shadow-2xl hover:border-[var(--brand-accent)]/80 pr-20"
               >
-                <div className="absolute top-4 left-2 w-12 h-12 rounded-full bg-gradient-to-br from-[var(--brand-cream)] to-[#f5d5c9] text-[var(--brand-accent)] font-bold text-lg flex items-center justify-center shadow-md">
+                <div className="absolute top-4 right-4 w-12 h-12 rounded-full bg-gradient-to-br from-[var(--brand-cream)] to-[#f5d5c9] text-[var(--brand-accent)] font-bold text-lg flex items-center justify-center shadow-md">
                   {idx + 1}
                 </div>
                 <div className="pt-8 space-y-3">
