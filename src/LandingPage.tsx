@@ -902,7 +902,7 @@ const LandingPage: React.FC = () => {
                 <span>אשמח לתאם שיחה לבדיקת התאמה לקורס</span>
               </button>
               <p className="text-base text-[#2d2520] text-center font-bold leading-relaxed">
-                הרשמה מוקדמת עד 29/11/25 · הקורס "מחוברים מחדש" במתנה לכל נרשם
+                הרשמה מוקדמת עד 20/12/25 · הקורס "מחוברים מחדש" במתנה לכל נרשם
               </p>
             </div>
           </div>
