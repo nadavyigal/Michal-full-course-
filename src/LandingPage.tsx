@@ -298,7 +298,7 @@ const LandingPage: React.FC = () => {
           <div className="space-y-2 md:space-y-8 text-[var(--brand-ink)]">
 
             <h1 className="text-4xl md:text-6xl font-display font-bold leading-tight md:leading-snug animate-fade-in-up text-[var(--brand-ink)] mb-6">
-              קורס לזוגיות טובה יותר
+              לחזור הביתה
             </h1>
 
             <h2 className="text-2xl md:text-4xl font-display font-medium leading-relaxed md:leading-snug animate-fade-in-up delay-100">
