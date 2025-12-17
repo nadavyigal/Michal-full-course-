@@ -14,7 +14,7 @@ import {
   MessageSquare,
 } from 'lucide-react';
 
-import heroMain from '../תמונה של WhatsApp‏ 2025-12-01 בשעה 13.06.01_df5423a4.jpg';
+// import heroMain from '../תמונה של WhatsApp‏ 2025-12-01 בשעה 13.06.01_df5423a4.jpg'; // Removed as unused
 import heroCouple from '../תמונה של WhatsApp‏ 2025-12-01 בשעה 13.07.13_a8a63e21.jpg';
 import logo from '../מחוברים מחדש לוגו - חדש.jpg';
 import newLogo from '../home-logo.png';
@@ -260,19 +260,13 @@ const LandingPage: React.FC = () => {
         {/* Background Image - Sunset/Warm Vibe */}
         <div className="absolute inset-0 z-0">
           <div className="absolute inset-0 bg-gradient-to-b from-[#fdfbf7] via-[#fff0ea] to-[#fcece6]" />
-          <img
-            src={heroMain}
-            alt="Background"
-            className="absolute bottom-0 left-0 right-0 w-full h-[60vh] object-cover opacity-50"
-          />
+          {/* Background Image Removed as requested */}
         </div>
 
         <div className="relative z-10 max-w-3xl mx-auto px-6 text-center flex flex-col items-center gap-4 md:gap-6">
 
           {/* Logo centered */}
-          <div className="animate-fade-in-up">
-            <img src={newLogo} alt="לחזור הביתה" className="h-40 md:h-56 w-auto drop-shadow-xl" />
-          </div>
+          {/* Logo removed as requested */}
 
           {/* Main Text Content */}
           <div className="space-y-2 md:space-y-8 text-[var(--brand-ink)]">
@@ -553,7 +547,7 @@ const LandingPage: React.FC = () => {
 
             <div className="bg-white rounded-3xl shadow-2xl border-2 border-[var(--brand-border)] overflow-hidden transform hover:scale-[1.02] transition-transform duration-300">
               <div className="h-[500px]">
-                <img src={michalPhoto} alt="מיכל סלונים" className="w-full h-full object-cover object-[center_20%]" />
+                <img src={michalPhoto} alt="מיכל סלונים" className="w-full h-full object-contain" />
               </div>
               <div className="p-10 space-y-5 bg-white">
                 <div className="flex items-center gap-4 text-base text-[#2d2520] font-semibold">
@@ -561,7 +555,7 @@ const LandingPage: React.FC = () => {
                   מאמנת אישית, זוגיות ופיתוח הון אנושי בארגון
                 </div>
                 <div className="text-xl text-[#2d2520] leading-relaxed font-display font-bold">
-                  מספיק שרק צד אחד יעשה את השינוי בשביל ליצור שינוי אמיתי עבור שניכם, כי תדמיינו זוג שרוקד ריקוד - מספיק שצד אחד ישנה את הצעדים, הצד שני לא יכול להמשיך.
+                  "מספיק שרק צד אחד יעשה את השינוי בשביל ליצור שינוי אמיתי עבור שניכם, כי תדמיינו זוג שרוקד ריקוד - מספיק שצד אחד ישנה את הצעדים, הצד שני לא יכול להמשיך."
                 </div>
               </div>
             </div>
