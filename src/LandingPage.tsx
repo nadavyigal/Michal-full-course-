@@ -146,6 +146,7 @@ const priceBlocks = [
     savings: '₪700',
     featured: false,
     bonus: true,
+    trackTitle: 'מסלול בסיס',
     note: 'כולל הקורס הפרונטלי מלא',
     link: 'https://meshulam.co.il/purchase?b=43d9178ba78a68612120e956374cc67b',
     features: [
@@ -161,6 +162,7 @@ const priceBlocks = [
     originalPrice: '₪4,500',
     savings: '₪1,050',
     bonus: true,
+    trackTitle: 'מסלול פרימיום',
     note: 'המסלול המלא עם ליווי אישי',
     link: 'https://meshulam.co.il/purchase?b=1c016a31c06024f2273b64c2c6705cb7',
     features: [
@@ -295,11 +297,15 @@ const LandingPage: React.FC = () => {
           {/* Main Text Content */}
           <div className="space-y-2 md:space-y-8 text-[var(--brand-ink)]">
 
-            <h1 className="text-2xl md:text-4xl font-display font-bold leading-relaxed md:leading-snug animate-fade-in-up delay-100">
+            <h1 className="text-4xl md:text-6xl font-display font-bold leading-tight md:leading-snug animate-fade-in-up text-[var(--brand-ink)] mb-6">
+              קורס לזוגיות טובה יותר
+            </h1>
+
+            <h2 className="text-2xl md:text-4xl font-display font-medium leading-relaxed md:leading-snug animate-fade-in-up delay-100">
               אהבה זה קל,
               <br className="hidden md:block" />
-              <span className="text-[#5d4037]"> זוגיות זה קשה.</span>
-            </h1>
+              <span className="text-[#5d4037] font-bold"> זוגיות זה קשה.</span>
+            </h2>
 
             <div className="space-y-6 text-lg md:text-xl font-medium leading-relaxed animate-fade-in-up delay-200 text-[#4a3b32] max-w-4xl mx-auto">
               <p>
@@ -603,7 +609,9 @@ const LandingPage: React.FC = () => {
                 key={block.label}
                 className={`group relative p-8 md:p-10 rounded-3xl shadow-xl border-2 transition-all duration-500 transform hover:-translate-y-3 hover:shadow-2xl grain-overlay flex flex-col ${block.featured
                   ? 'bg-gradient-to-br from-[#8b5a4a] via-[#7d4a3d] to-[#6d3f34] border-[#8b5a4a] md:scale-105'
-                  : 'bg-white border-[var(--brand-border)] hover:border-[var(--brand-accent)]'
+                  : (block as any).trackTitle === 'מסלול פרימיום'
+                    ? 'bg-[#FDF1E6] border-[#e6b3a3] hover:border-[var(--brand-accent)]'
+                    : 'bg-white border-[var(--brand-border)] hover:border-[var(--brand-accent)]'
                   }`}
                 id={block.label.includes('אימון') ? 'pricing-personal' : undefined}
               >
@@ -625,7 +633,12 @@ const LandingPage: React.FC = () => {
 
                 <div className="relative space-y-6">
                   <div>
-                    <h3 className={`text-2xl md:text-3xl font-display font-bold mb-2 ${block.featured ? 'text-white' : 'text-[var(--brand-ink)]'}`}>
+                    {(block as any).trackTitle && (
+                      <h3 className={`text-2xl md:text-3xl font-display font-bold mb-4 ${block.featured ? 'text-white' : 'text-[var(--brand-ink)]'}`}>
+                        {(block as any).trackTitle}
+                      </h3>
+                    )}
+                    <h3 className={`text-xl md:text-2xl font-bold mb-2 ${block.featured ? 'text-white' : 'text-[#5d4037]'}`}>
                       {block.label}
                     </h3>
                     <p className={`text-base font-medium ${block.featured ? 'text-white/90' : 'text-[#2d2520]'}`}>
