@@ -729,23 +729,21 @@ const LandingPage: React.FC = () => {
 
             <div className="order-1 lg:order-2 space-y-8">
               <div>
-                <p className="text-sm font-bold text-[var(--brand-accent)] uppercase tracking-[0.3em] mb-4">
-                  רוצים להתחיל בקורס דיגיטלי?
-                </p>
+                <div className="flex items-center gap-2 mb-4">
+                  <span className="px-4 py-1.5 bg-gradient-to-r from-[var(--brand-accent)] to-[var(--brand-terracotta)] text-white text-sm font-bold rounded-full shadow-lg animate-pulse-glow">
+                    🎁 בונוס מיוחד לנרשמים לקורס "לחזור הביתה"
+                  </span>
+                </div>
                 <h2 className="text-4xl md:text-5xl font-display font-bold text-[var(--brand-ink)] leading-tight mb-4">
                   קורס "מחוברים מחדש"
                 </h2>
-                <p className="text-xl text-[var(--brand-ink)]/70 leading-relaxed">
-                  קורס דיגיטלי מקיף שיעזור לכם לחזור לקשר עם עצמכם ועם בן/בת הזוג. למדו בקצב שלכם, מהבית.
+                <p className="text-xl text-[var(--brand-ink)] leading-relaxed">
+                  קורס דיגיטלי פרקטי, קצר ועמוק שילמד אתכם איך לריב ולהישאר קרובים.
+                  איך להצליח לתקשר גם כשקשה, איך להעביר את המסר שלכם כדי שהצד השני ישמע ויבין.
                 </p>
               </div>
 
               <div className="bg-white rounded-3xl p-8 shadow-xl border-2 border-[var(--brand-border)]">
-                <div className="flex items-baseline gap-3 mb-6">
-                  <div className="text-5xl font-black font-display text-[var(--brand-accent)]">₪297</div>
-                  <div className="text-lg text-[var(--brand-ink)]/60">תשלום חד פעמי</div>
-                </div>
-
                 <div className="space-y-4 mb-8">
                   <div className="flex items-start gap-3">
                     <CheckCircle className="w-5 h-5 flex-shrink-0 mt-0.5 text-[var(--brand-accent)]" />
@@ -765,16 +763,45 @@ const LandingPage: React.FC = () => {
                   </div>
                 </div>
 
-                <a
-                  href={getLinkWithRef("https://meshulam.co.il/purchase?b=84cd3ae51b1a480af5e746f4a4a2dcb6")}
-                  className="w-full py-5 px-6 rounded-full bg-white text-[#6d3f34] border-2 border-[#6d3f34] font-bold text-lg transition-all duration-300 transform hover:scale-105 shadow-xl hover:shadow-2xl flex items-center justify-center hover:bg-[#6d3f34]/5"
-                >
-                  הצטרפו עכשיו
-                </a>
+                <div className="bg-[var(--brand-cream)]/30 p-6 rounded-2xl border border-[var(--brand-accent)]/20">
+                  <p className="text-lg text-[#2d2520] text-center font-bold">
+                    💡 קורס זה (בשווי ₪297) ניתן במתנה
+                    <br />
+                    לכל הנרשמים לקורס הפרונטלי "לחזור הביתה"
+                  </p>
+                </div>
+              </div>
 
-                <p className="text-base text-[#2d2520] text-center mt-4 font-medium">
-                  💡 הקורס הזה כלול במתנה בכל אחת מאפשרויות הקורס הפרונטלי
-                </p>
+              {/* Testimonials for Digital Course */}
+              <div className="grid gap-6 mt-8">
+                <div className="bg-white p-6 rounded-2xl shadow-md border border-[var(--brand-border)]">
+                  <div className="flex gap-1 mb-3">
+                    {[1, 2, 3, 4, 5].map((_, i) => (
+                      <Star key={i} className="w-4 h-4 text-[var(--brand-gold)] fill-current" />
+                    ))}
+                  </div>
+                  <p className="text-[var(--brand-ink)] italic leading-relaxed text-sm">
+                    "היי מיכל יקרה, רציתי לכתוב לך באופן אישי שהקורס שלך פשוט מדהים. תודה רבה!
+                    אחרי שנים של התפתחות, לימודים, טיפולים... אני מרגישה כאילו סיכמת לי הכל בקורס אחד.
+                    אני מכירה הכל אבל ריכזת את זה בצורה כ"כ יפה, וכ"כ מאפשרת שממש נותנת לי תחושה שהפעם אני יכולה!
+                    שיש לי סיכוי להצליח לתקשר טוב יותר... תודה על הבסיס לריפוי הפנימי ועל כל הכלים...
+                    זה ממש קורס שיכול לשנות את החיים, שווה כל אגורה."
+                  </p>
+                </div>
+
+                <div className="bg-white p-6 rounded-2xl shadow-md border border-[var(--brand-border)]">
+                  <div className="flex gap-1 mb-3">
+                    {[1, 2, 3, 4, 5].map((_, i) => (
+                      <Star key={i} className="w-4 h-4 text-[var(--brand-gold)] fill-current" />
+                    ))}
+                  </div>
+                  <p className="text-[var(--brand-ink)] italic leading-relaxed text-sm">
+                    "הי מיכל, צפיתי בכל הקורס, ואני גם מיישמת.
+                    זה אכן דורש תרגול אבל כמו שאמרת, ברגע שאני משנה משהו בעצמי... הבן זוג גם מגיב אחרת.
+                    הכלים יעילים גם מול הילדים, לא רק בזוגיות...
+                    אהבתי מאוד את זה שהוא קצר, ממוקד, לא יקר, נותן מיד כלים פרקטיים ליישום במקום טיפול זוגי שעולה הון, ארוך ולא תמיד עוזר.. תודה"
+                  </p>
+                </div>
               </div>
             </div>
           </div>
