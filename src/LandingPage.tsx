@@ -102,7 +102,7 @@ const outcomes = [
   },
   {
     title: 'גוף',
-    text: 'הכרות עם מערכת החישה ותחושות הגוף שלי - כלים פרקטיים לעבודה איתן - מרכז פנימי יציב יותר - יכולת לנהל סיטואציה במקום להיגרר אחריה',
+    text: 'הכרות עם מערכת החישה ותחושות הגוף שלי - כלים פרקטיים לעבודה איתם - מרכז פנימי יציב יותר - יכולת לנהל סיטואציה במקום להיגרר אחריה',
   },
   {
     title: 'תקשורת',
@@ -114,7 +114,7 @@ const outcomes = [
   },
   {
     title: 'אחריות',
-    text: 'פחות האשמה ותסכול ויותר אחריות ואונים',
+    text: 'תרגישו יותר עוצמה, ביטחון ופחות אשמה והאשמה',
   },
   {
     title: 'יכולת להתמודד עם רגשות מאמללים',
@@ -144,7 +144,7 @@ const priceBlocks = [
     price: '₪2,100',
     originalPrice: '₪2,800',
     savings: '₪700',
-    featured: true,
+    featured: false,
     bonus: true,
     note: 'כולל הקורס הפרונטלי מלא',
     link: 'https://meshulam.co.il/purchase?b=43d9178ba78a68612120e956374cc67b',
@@ -577,11 +577,7 @@ const LandingPage: React.FC = () => {
                 <img src={michalPhoto} alt="מיכל סלונים" className="w-full h-full object-contain" />
               </div>
               <div className="p-10 space-y-5 bg-white">
-                <div className="flex items-center gap-4 text-base text-[#2d2520] font-semibold">
-                  <Shield className="w-6 h-6 text-[var(--brand-accent)]" />
-                  מאמנת אישית, זוגיות ופיתוח הון אנושי בארגון
-                </div>
-                <div className="text-xl text-[#2d2520] leading-relaxed font-display font-bold">
+                <div className="text-xl text-[#2d2520] leading-relaxed font-display">
                   "מספיק שרק צד אחד יעשה את השינוי בשביל ליצור שינוי אמיתי עבור שניכם, כי תדמיינו זוג שרוקד ריקוד - מספיק שצד אחד ישנה את הצעדים, הצד שני לא יכול להמשיך."
                 </div>
               </div>
@@ -715,7 +711,7 @@ const LandingPage: React.FC = () => {
               <Star className="w-5 h-5" />
             </button>
             <button
-              onClick={() => scrollToSection('cta')}
+              onClick={() => window.open('https://wa.me/972526665061', '_blank')}
               className="flex items-center justify-center gap-2 px-6 py-4 rounded-full bg-white/95 text-[var(--brand-ink)] font-semibold text-base border-2 border-[var(--brand-border)] hover:bg-white hover:scale-[1.05] active:scale-95 transition-all duration-300 shadow-lg min-h-[48px] w-full"
             >
               <MessageCircle className="w-5 h-5" />
@@ -916,15 +912,15 @@ const LandingPage: React.FC = () => {
                 מחכה לראותך אותך שם ♥
               </p>
               <div className="flex flex-wrap gap-4 text-base text-[var(--brand-ink)] font-medium">
-                <span className="inline-flex items-center gap-3 px-5 py-3 rounded-full bg-white/90 border-2 border-[var(--brand-border)] shadow-md">
+                <span className="inline-flex items-center gap-3 px-5 py-3 rounded-xl bg-white/90 border-2 border-[var(--brand-border)] shadow-md">
                   <CheckCircle className="w-5 h-5 text-[var(--brand-accent)]" />
                   7 שיעורים · 21 שעות לימוד
                 </span>
-                <span className="inline-flex items-center gap-3 px-5 py-3 rounded-full bg-white/90 border-2 border-[var(--brand-border)] shadow-md">
+                <span className="inline-flex items-center gap-3 px-5 py-3 rounded-xl bg-white/90 border-2 border-[var(--brand-border)] shadow-md">
                   <Clock className="w-5 h-5 text-[var(--brand-accent)]" />
                   ימי שלישי 10:00-13:00 · ת"א
                 </span>
-                <span className="inline-flex items-center gap-3 px-5 py-3 rounded-full bg-white/90 border-2 border-[var(--brand-border)] shadow-md">
+                <span className="inline-flex items-center gap-3 px-5 py-3 rounded-xl bg-white/90 border-2 border-[var(--brand-border)] shadow-md">
                   <Heart className="w-5 h-5 text-[var(--brand-accent)]" />
                   מרחב בטוח, קבוצה קטנה
                 </span>
@@ -944,7 +940,7 @@ const LandingPage: React.FC = () => {
                 <Star className="w-5 h-5" />
               </button>
               <button
-                onClick={() => scrollToSection('pricing')}
+                onClick={() => window.open('https://wa.me/972526665061', '_blank')}
                 className="w-full py-5 px-6 rounded-full bg-white/95 text-[var(--brand-ink)] font-semibold text-base md:text-lg border-2 border-[var(--brand-border)] hover:bg-white hover:scale-105 active:scale-95 transition-all duration-300 shadow-md min-h-[48px] flex items-center justify-center gap-2"
               >
                 <MessageCircle className="w-5 h-5" />
