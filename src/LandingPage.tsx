@@ -12,6 +12,15 @@ import {
   RefreshCw,
   Users,
   MessageSquare,
+  Minimize2,
+  AlertCircle,
+  Dumbbell,
+  User,
+  GraduationCap,
+  Lightbulb,
+  Eye,
+  Handshake,
+  Sprout,
 } from 'lucide-react';
 
 // import heroMain from '../תמונה של WhatsApp‏ 2025-12-01 בשעה 13.06.01_df5423a4.jpg'; // Removed as unused
@@ -29,15 +38,15 @@ const painPoints = [
 ];
 
 const fitList = [
-  'המרחק גדל, הקרבה והקלות הלכו לאיבוד',
-  'התקשורת מתוחה ושחוקה',
-  'המאמץ נופל בעיקר עליך',
-  'כשרק אחד מבני הזוג מעוניין לעבור טיפול או התפתחות בנושא',
-  'כבר עברת את קורס "מחוברים מחדש" ורוצה להעמיק',
-  'כשיש הבנה שכדי לשנות את הזוגיות – לא חייבים לשנות את הפרטנר',
-  'אם יש לך מוכנות להביט פנימה, לרפא את המקומות שכבר מזמן מבקשים תשומת לב',
-  'כשיש רצון להפסיק את הריב ולחזור לקרבה ואינטימיות',
-  'כשיש רצון להתפתח ולגדול',
+  { text: 'המרחק גדל, הקרבה והקלות הלכו לאיבוד', icon: Minimize2 },
+  { text: 'התקשורת מתוחה ושחוקה', icon: AlertCircle },
+  { text: 'המאמץ נופל בעיקר עליך', icon: Dumbbell },
+  { text: 'כשרק אחד מבני הזוג מעוניין לעבור טיפול או התפתחות בנושא', icon: User },
+  { text: 'כבר עברת את קורס "מחוברים מחדש" ורוצה להעמיק', icon: GraduationCap },
+  { text: 'כשיש הבנה שכדי לשנות את הזוגיות – לא חייבים לשנות את הפרטנר', icon: Lightbulb },
+  { text: 'אם יש לך מוכנות להביט פנימה, לרפא את המקומות שכבר מזמן מבקשים תשומת לב', icon: Eye },
+  { text: 'כשיש רצון להפסיק את הריב ולחזור לקרבה ואינטימיות', icon: Handshake },
+  { text: 'כשיש רצון להתפתח ולגדול', icon: Sprout },
 ];
 
 const details = [
@@ -93,11 +102,11 @@ const outcomes = [
   },
   {
     title: 'גוף',
-    text: 'הכרות עם מערכת החישה ותחושות הגוף שלי - כלים פרקטיים לעבודה איתה - מרכז פנימי יציב יותר - יכולת לנהל סיטואציה במקום להיגרר אחריה',
+    text: 'הכרות עם מערכת החישה ותחושות הגוף שלי - כלים פרקטיים לעבודה איתן - מרכז פנימי יציב יותר - יכולת לנהל סיטואציה במקום להיגרר אחריה',
   },
   {
     title: 'תקשורת',
-    text: 'יכולת לדבר אותי - להעביר מסר שצד השני ישמע - גם כשיש פערים, אי הסכמות וריחוק',
+    text: 'יכולת לדבר אותי - להעביר מסר שהצד השני ישמע - גם כשיש פערים, אי הסכמות וריחוק',
   },
   {
     title: 'פחות כעס והתפרצויות',
@@ -108,7 +117,7 @@ const outcomes = [
     text: 'פחות האשמה ותסכול ויותר אחריות ואונים',
   },
   {
-    title: 'יכול להתמודד עם רגשות מאמללים',
+    title: 'יכולת להתמודד עם רגשות מאמללים',
     text: 'תלמדו לעבוד עם פחד, כאב, אכזבה',
   },
   {
@@ -370,7 +379,7 @@ const LandingPage: React.FC = () => {
                 >
                   <div className="absolute inset-0 rounded-3xl bg-gradient-to-br from-[var(--brand-cream)]/50 via-transparent to-[var(--brand-terracotta)]/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
                   <div className="relative flex items-start gap-5">
-                    <div className="flex-shrink-0 w-10 h-10 rounded-full bg-gradient-to-br from-[var(--brand-accent)] to-[var(--brand-terracotta)] flex items-center justify-center shadow-lg">
+                    <div className="flex-shrink-0 w-10 h-10 rounded-full bg-[#E6B3A3] flex items-center justify-center shadow-lg">
                       <IconComponent className="w-6 h-6 text-white" />
                     </div>
                     <p className="text-xl text-[#2d2520] leading-relaxed font-semibold pt-1">{item.text}</p>
@@ -400,21 +409,24 @@ const LandingPage: React.FC = () => {
               <h2 className="text-5xl md:text-6xl lg:text-7xl font-display font-bold text-[var(--brand-ink)] leading-tight">למי שמרגיש ש...</h2>
             </div>
             <div className="lg:col-span-2 grid sm:grid-cols-2 gap-7">
-              {fitList.map((item, idx) => (
-                <div
-                  key={item}
-                  className="group relative p-9 bg-white rounded-3xl border-2 border-[var(--brand-border)] shadow-lg transition-all duration-500 transform hover:-translate-y-4 hover:shadow-2xl hover:border-[var(--brand-accent)] grain-overlay"
-                  style={{ animationDelay: `${idx * 0.1}s` }}
-                >
-                  <div className="absolute inset-0 rounded-3xl bg-gradient-to-br from-[var(--brand-accent)]/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-                  <div className="relative flex items-start gap-5">
-                    <div className="flex-shrink-0 w-12 h-12 rounded-2xl bg-gradient-to-br from-[var(--brand-accent)]/20 to-[var(--brand-terracotta)]/20 flex items-center justify-center border-2 border-[var(--brand-accent)]/30 group-hover:border-[var(--brand-accent)] transition-colors duration-300">
-                      <Heart className="w-6 h-6 text-[var(--brand-accent)]" />
+              {fitList.map((item, idx) => {
+                const Icon = item.icon;
+                return (
+                  <div
+                    key={idx}
+                    className="group relative p-9 bg-white rounded-3xl border-2 border-[var(--brand-border)] shadow-lg transition-all duration-500 transform hover:-translate-y-4 hover:shadow-2xl hover:border-[var(--brand-accent)] grain-overlay"
+                    style={{ animationDelay: `${idx * 0.1}s` }}
+                  >
+                    <div className="absolute inset-0 rounded-3xl bg-gradient-to-br from-[var(--brand-accent)]/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                    <div className="relative flex items-start gap-5">
+                      <div className="flex-shrink-0 w-12 h-12 rounded-2xl bg-gradient-to-br from-[var(--brand-accent)]/20 to-[var(--brand-terracotta)]/20 flex items-center justify-center border-2 border-[var(--brand-accent)]/30 group-hover:border-[var(--brand-accent)] transition-colors duration-300">
+                        <Icon className="w-6 h-6 text-[var(--brand-accent)]" />
+                      </div>
+                      <p className="text-xl text-[#2d2520] leading-relaxed font-semibold pt-2">{item.text}</p>
                     </div>
-                    <p className="text-xl text-[#2d2520] leading-relaxed font-semibold pt-2">{item}</p>
                   </div>
-                </div>
-              ))}
+                );
+              })}
             </div>
           </div>
         </div>
@@ -456,12 +468,12 @@ const LandingPage: React.FC = () => {
         </div>
       </section>
 
-      <section id="program" className="relative py-24 sm:py-32 overflow-hidden">
+      <section id="program" className="relative py-12 sm:py-20 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-b from-white via-[var(--brand-cream)]/20 to-[var(--brand-soft)]" />
         <div className="absolute top-1/3 right-10 w-96 h-96 bg-[var(--brand-gold)]/10 blur-3xl blob animate-float" />
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
-          <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-8 mb-20">
+          <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-8 mb-12">
             <div className="space-y-6">
               {/* <p className="text-base font-bold text-[var(--brand-accent)] uppercase tracking-[0.3em]">מבנה הקורס</p> */}{/* Removed as requested */}
               <h2 className="text-4xl md:text-6xl lg:text-7xl font-display font-bold text-[var(--brand-ink)] leading-tight">מבנה הקורס ותוכן עניינים</h2>
@@ -561,7 +573,7 @@ const LandingPage: React.FC = () => {
             </div>
 
             <div className="bg-white rounded-3xl shadow-2xl border-2 border-[var(--brand-border)] overflow-hidden transform hover:scale-[1.02] transition-transform duration-300">
-              <div className="h-[500px]">
+              <div className="w-full">
                 <img src={michalPhoto} alt="מיכל סלונים" className="w-full h-full object-contain" />
               </div>
               <div className="p-10 space-y-5 bg-white">
@@ -599,7 +611,7 @@ const LandingPage: React.FC = () => {
                   }`}
               >
                 {block.featured && (
-                  <div className="absolute -top-4 left-1/2 -translate-x-1/2 px-6 py-2 bg-[var(--brand-gold)] text-white font-bold text-sm rounded-full shadow-lg">
+                  <div className="absolute -top-4 left-1/2 -translate-x-1/2 px-6 py-2 bg-[var(--brand-gold)] text-[#5d4037] font-bold text-sm rounded-full shadow-lg">
                     הכי פופולרי! 🔥
                   </div>
                 )}
