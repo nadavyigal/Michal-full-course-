@@ -177,6 +177,21 @@ const LandingPage: React.FC = () => {
     }
   };
 
+  const getLinkWithRef = (url: string | undefined) => {
+    if (!url) return '#';
+    if (typeof window === 'undefined') return url;
+    try {
+      const currentUrl = new URL(window.location.href);
+      const targetUrl = new URL(url);
+      currentUrl.searchParams.forEach((value, key) => {
+        targetUrl.searchParams.set(key, value);
+      });
+      return targetUrl.toString();
+    } catch (e) {
+      return url;
+    }
+  };
+
   const primaryCta = (
     <button
       onClick={() => scrollToSection('pricing')}
@@ -662,7 +677,7 @@ const LandingPage: React.FC = () => {
                   )}
 
                   <a
-                    href={(block as any).link}
+                    href={getLinkWithRef((block as any).link)}
                     className={`w-full py-5 px-6 rounded-full font-bold text-lg transition-all duration-300 transform hover:scale-105 shadow-xl flex items-center justify-center ${block.featured
                       ? 'bg-white text-[#6d3f34] hover:bg-white/95 border-2 border-white'
                       : 'bg-white text-[#6d3f34] border-2 border-[#6d3f34] hover:bg-[#6d3f34]/5'
@@ -751,7 +766,7 @@ const LandingPage: React.FC = () => {
                 </div>
 
                 <a
-                  href="https://meshulam.co.il/purchase?b=84cd3ae51b1a480af5e746f4a4a2dcb6"
+                  href={getLinkWithRef("https://meshulam.co.il/purchase?b=84cd3ae51b1a480af5e746f4a4a2dcb6")}
                   className="w-full py-5 px-6 rounded-full bg-white text-[#6d3f34] border-2 border-[#6d3f34] font-bold text-lg transition-all duration-300 transform hover:scale-105 shadow-xl hover:shadow-2xl flex items-center justify-center hover:bg-[#6d3f34]/5"
                 >
                   הצטרפו עכשיו
