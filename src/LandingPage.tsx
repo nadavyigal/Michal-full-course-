@@ -609,9 +609,10 @@ const LandingPage: React.FC = () => {
                   ? 'bg-gradient-to-br from-[#8b5a4a] via-[#7d4a3d] to-[#6d3f34] border-[#8b5a4a] md:scale-105'
                   : 'bg-white border-[var(--brand-border)] hover:border-[var(--brand-accent)]'
                   }`}
+                id={block.label.includes('אימון') ? 'pricing-personal' : undefined}
               >
                 {block.featured && (
-                  <div className="absolute -top-4 left-1/2 -translate-x-1/2 px-6 py-2 bg-[var(--brand-gold)] text-[#5d4037] font-bold text-sm rounded-full shadow-lg">
+                  <div className="absolute -top-4 left-1/2 -translate-x-1/2 px-6 py-2 bg-[#1e2a4a] text-white font-bold text-sm rounded-full shadow-lg border border-white/20">
                     הכי פופולרי! 🔥
                   </div>
                 )}
@@ -707,7 +708,7 @@ const LandingPage: React.FC = () => {
           <div className="mt-14 flex flex-col gap-4 max-w-2xl mx-auto">
             {primaryCta}
             <button
-              onClick={() => scrollToSection('cta')}
+              onClick={() => scrollToSection('pricing-personal')}
               className="flex items-center justify-center gap-2 px-6 py-4 md:px-8 md:py-5 rounded-full bg-white text-[var(--brand-ink)] font-bold text-base md:text-lg border-2 border-[var(--brand-accent)] shadow-xl hover:scale-[1.05] active:scale-95 transition-all duration-300 min-h-[48px] w-full"
             >
               <span>המסלול עם אימון אישי</span>
@@ -742,7 +743,7 @@ const LandingPage: React.FC = () => {
             <div className="order-1 lg:order-2 space-y-8">
               <div>
                 <div className="flex items-center gap-2 mb-4">
-                  <span className="px-4 py-1.5 bg-gradient-to-r from-[var(--brand-accent)] to-[var(--brand-terracotta)] text-white text-sm font-bold rounded-full shadow-lg animate-pulse-glow">
+                  <span className="px-4 py-1.5 bg-[#5d4037] text-white text-sm font-bold rounded-full shadow-lg animate-pulse-glow">
                     🎁 בונוס מיוחד לנרשמים לקורס "לחזור הביתה"
                   </span>
                 </div>
@@ -880,7 +881,7 @@ const LandingPage: React.FC = () => {
                 ומה אם רק אני רוצה שינוי?
               </h3>
               <p className="text-xl text-[#2d2520] leading-relaxed font-medium">
-                <strong>זה מעולה.</strong> מספיק שאחד הצצדים עושה שינוי והכל משתנה.<br />
+                <strong>זה מעולה.</strong> מספיק שאחד הצדדים עושה שינוי והכל משתנה.<br />
                 כשהתקשורת משתנה — הצד השני מגיב אחרת, בלי לחץ או דרישה.
               </p>
             </div>
@@ -936,7 +937,7 @@ const LandingPage: React.FC = () => {
               </div>
               {primaryCta}
               <button
-                onClick={() => scrollToSection('pricing')}
+                onClick={() => scrollToSection('pricing-personal')}
                 className="w-full py-5 px-6 rounded-full bg-white text-[var(--brand-ink)] font-bold text-base md:text-lg border-2 border-[var(--brand-accent)]/50 shadow-lg hover:scale-105 active:scale-95 transition-all duration-300 min-h-[48px] flex items-center justify-center gap-2"
               >
                 <span>המסלול עם אימון אישי</span>
