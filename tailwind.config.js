@@ -7,9 +7,8 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        serif: ['Playfair Display', 'Georgia', 'serif'],
-        sans: ['Assistant', 'Segoe UI', 'system-ui', '-apple-system', 'BlinkMacSystemFont', 'Roboto', 'sans-serif'],
-        display: ['Rubik', 'Assistant', 'sans-serif'],
+        serif: ['David Libre', 'Georgia', 'serif'],
+        sans: ['Assistant', 'system-ui', '-apple-system', 'sans-serif'],
       },
     },
   },
